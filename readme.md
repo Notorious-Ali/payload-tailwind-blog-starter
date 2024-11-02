@@ -20,7 +20,7 @@ You'll need to set up your `PAYLOAD_SECRET` and `ADMIN_PASSWORD` in the project 
 
 ## ⚠️ Beta Notice
 
-Please note that this project uses Payload CMS version 3.0.0-beta.108, which is still in beta. While it offers exciting new features and improvements, it may not be fully stable for production use.
+Please note that this project uses Payload CMS version 3.0.0-beta.123, which is still in beta. While it offers exciting new features and improvements, it may not be fully stable for production use.
 
 We recommend keeping an eye on the [Payload CMS GitHub repository](https://github.com/payloadcms/payload) for updates and the official release of version 3.0.0.
 
@@ -46,23 +46,42 @@ We recommend keeping an eye on the [Payload CMS GitHub repository](https://githu
 
    ```bash
    git clone https://github.com/your-username/payload-tailwind-blog-starter.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
    cd payload-tailwind-blog-starter
    ```
 
-2. Install dependencies:
+3. Install dependencies:
 
    ```bash
    pnpm install
    ```
 
-3. Set up your environment variables:
+4. Set up your environment variables:
    Create a `.env` file in the root directory and add necessary variables.
 
-4. Run the development server:
+```bash
+POSTGRES_URL=
+BLOB_READ_WRITE_TOKEN=
+PAYLOAD_SECRET=
+NODE_ENV=development
+ADMIN_PASSWORD=
+```
 
-   ```bash
-   pnpm dev
-   ```
+5. Run Payload migrations
+
+```bash
+pnpm run payload migrate
+```
+
+5. Run the development server:
+
+```bash
+pnpm dev
+```
 
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to see the result.
 
